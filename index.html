@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="task-section">
+            <h3>ToDo-List</h3>
+            <div class="task-input-container">
+                <input type="text" id="task-input" placeholder="Enter your task">
+                <select id="task-type">
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                </select>
+                <button id="add-task">Add Task</button>
+            </div>
+            <div class="task-list">
+                <div class="task-column">
+                    <h2>Daily Tasks</h2>
+                    <ul id="daily-tasks"></ul>
+                </div>
+                <div class="task-column">
+                    <h2>Weekly Tasks</h2>
+                    <ul id="weekly-tasks"></ul>
+                </div>
+            </div>
+
+            <button id="show-completed" class="show-completed-button">Show Completed Tasks</button>
+            <div id="completed-tasks-section" style="display: none;">
+                <h2>Great! Keep Doing!</h2>
+                <table id="completed-tasks" style="width: 100%; text-align: left;">
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Category</th>
+                            <th>Completed At</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <p id="no-completed-tasks" style="display: none;">No tasks completed yet!</p>
+            </div>
+
+            <p id="task-error-message" class="error-message"></p>
+        </div>
+        <div class="box" id="mood-section">
+            <h3>How's your Mood</h3>
+            <div class="mood">
+                <span class="emoji" data-mood="happy" role="img" aria-label="Happy">😃</span>
+                <span class="emoji" data-mood="neutral" role="img" aria-label="Neutral">😐</span>
+                <span class="emoji" data-mood="sad" role="img" aria-label="Sad">😟</span>
+            </div>
+            <p id="mood-message">Select your mood to receive a message!</p>
+        </div>
+        <div class="box" id="self-care-section">
+            <h3>Self-Care Checklist</h3>
+            <div class="self-care">
+                <label>
+                    <input type="checkbox" id="Shower"> Shower 🚿
+                </label>
+                <label>
+                    <input type="checkbox" id="Skincare"> Skincare🧴
+                </label>
+                <label>
+                    <input type="checkbox" id="Sunscreen"> Sunscreen🌞
+                </label>
+                <label>
+                    <input type="checkbox" id="Exercise">Exercise🏋️‍♀️
+                </label>
+                <label>
+                    <input type="checkbox" id="meditate"> Meditate🧘‍♂️
+                </label>
+                <label>
+                    <input type="checkbox" id="Drink Water"> Drink Water💧
+                </label>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
+
